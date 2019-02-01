@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mini To Do List App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+
+<body>
+    <div class="todo-container">
+        <div class="dates">
+            <h1 id="current-date"></h1>
+            <h4 id="current-month">
+                <span id="current-year"></span>
+            </h4>
+
+            <h4 class="day" id="current-weekday"></h4>
+        </div>
+        <div class="todo-list">
+            <ul>
+
+            </ul>
+        </div>
+        <form class="hide-form">
+            <input type="text" placeholder="Your task..." id="input">
+            <input type="submit" hidden>
+        </form>
+        <div class="add"><button class="add-btn" id="add-task-btn">&plus;</button></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

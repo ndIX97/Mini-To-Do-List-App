@@ -1,0 +1,208 @@
+:root {
+    --btn-color: #50e3a4;
+    --bg: #f0efe9;
+    --btn-plus-bg: #50e3a4;
+    --btn-plus-color: #46be8b;
+    --btn-minus-bg: #ff4d4d;
+    --btn-minus-color: #cc0000;
+    --text-color: #6f737b;
+    --add-btn-size: 50px;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.todo-container {
+    width: 300px;
+    margin-bottom: 50px;
+    background: #fff;
+    padding: 20px;
+    max-height: 85vh;
+}
+
+.dates {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+.dates h1,
+.dates h4,
+.dates .day {
+    margin: 8px 0;
+}
+
+.dates h1 {
+    grid-row: span 2;
+    color: #5c5f6f;
+    font-size: 2.7em;
+}
+
+.dates h4 {
+    color: var(--text-color);
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 1em;
+    padding-left: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.dates h4 span {
+    font-weight: 400;
+}
+
+.dates .day {
+    margin: auto 0;
+    text-transform: uppercase;
+    font-weight: 550;
+}
+
+.todo-list {
+    display: grid;
+    padding: 0;
+
+}
+
+.todo-list ul {
+    max-height: 50vh;
+    width: 300px;
+    background-color: #fff;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+.todo-list ul::-webkit-scrollbar {
+    width: 0;
+}
+
+.todo-list ul li {
+    height: auto;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 11fr 1fr;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.todo-list ul li:hover {
+    border-left: 3px solid var(--btn-plus-bg);
+}
+
+.todo-list ul li h4 {
+    height: 100%;
+    overflow-wrap: break-word;
+    color: #7f8389;
+    overflow: hidden;
+}
+
+.todo-list ul li h4:hover {
+    color: #7f8389;
+}
+
+.todo-list ul li span {
+    margin: auto;
+    width: 5px;
+    height: 5px;
+    border: 1.5px solid #edf0f4;
+    border-radius: 50%;
+}
+
+.todo-list ul li span:hover {
+    border: 2px solid var(--btn-plus-bg);
+}
+
+.todo-list ul li.done {
+    color: #edf0f4;
+}
+
+.todo-list ul li h4,
+.todo-list ul li span {
+    margin: auto 0;
+    padding: .5em;
+}
+
+.add {
+    display: flex;
+    justify-content: center;
+
+}
+
+.add .add-btn,
+.add .minus-btn {
+    background-color: var(--btn-plus-bg);
+    color: var(--btn-plus-color);
+    border-radius: 50%;
+    border: none;
+    font-size: 35px;
+    width: var(--add-btn-size);
+    height: var(--add-btn-size);
+    outline: none;
+    transform: translateY(100%);
+    margin: 0;
+}
+
+.add .add-btn:hover,
+.add .minus-btn:hover {
+    background-color: var(--btn-plus-color);
+    color: var(--btn-plus-bg);
+    cursor: pointer;
+}
+
+.add .minus-btn {
+    background-color: var(--btn-minus-bg);
+    color: var(--btn-minus-color);
+}
+
+.add .minus-btn:hover {
+    background-color: var(--btn-minus-color);
+    color: var(--btn-minus-bg);
+}
+
+input[type="text"] {
+    color: var(--text-color);
+    width: 93%;
+    outline: none;
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #edf0f4;
+}
+
+input[type="text"]:focus {
+    color: var(--text-color);
+}
+
+input[type="text"]::placeholder {
+    color: var(--text-color);
+}
+
+.hide-form {
+    display: none;
+}
+
+.show-form {
+    display: block;
+}
+
+form {
+    width: 100%;
+}
+
+.delete {
+    color: #c7cad2;
+    background-color: #50e3a4;
+    border: 1px solid transparent;
+}
